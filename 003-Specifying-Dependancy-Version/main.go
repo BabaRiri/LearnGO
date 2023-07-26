@@ -16,7 +16,8 @@ func main() {
 	fmt.Println(puppy.Barks(), puppy.Bark())
 
 	//Accessing dog module through puppy
-	fmt.Printf("%v\n%v", puppy.BigBark(), puppy.BigBarks())
+	fmt.Printf("%v\n%v\n", puppy.BigBark(), puppy.BigBarks())
 
-	puppy.version11()
+	puppy.Version11()
+	puppy.Version12()
 }
