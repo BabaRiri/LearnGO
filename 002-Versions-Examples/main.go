@@ -6,6 +6,6 @@ func main() {
     fmt.Println("Hello World!")
 }
 
-func VC2() {
-	fmt.Println("This is version 2")
+func VC11() {
+	fmt.Println("This is version 1.1")
 }
