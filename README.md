@@ -1,1 +1,1 @@
-A repo to practice setting up a repo and making changes to it in a seamless manner
+A repo to practice setting up a repo and making changes to it in a seamless manner. It contains the exercises i have done in code, the topics i have covered and the examples I followed from a Udemy course on Go programming.
