@@ -10,7 +10,7 @@ func main() {
 		x := rand.Intn(10)
 		y := rand.Intn(10)
 
-		fmt.Printf("x = %v\ny = %v\n", x, y)
+		fmt.Printf("i = %v\tx = %v\ny = %v\n", i, x, y)
 
 		switch {
 		case (x < 4 && y < 4):
