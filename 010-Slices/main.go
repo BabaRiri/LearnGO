@@ -83,4 +83,19 @@ func main() {
 	slice3 := [][]string{slice1, slice2}
 	fmt.Println(slice3)
 
+	fmt.Printf("-------------------------------\n")
+
+	//Slices point to an aunderlying arraay
+	s1 := []int{1, 2, 3, 4}
+	s2 := s1
+
+	fmt.Printf("s1: %v\n", s1)
+	fmt.Printf("s2: %v\n", s2)
+	
+	s1[0] = 100
+	
+	fmt.Printf("s1: %v\n", s1)
+	fmt.Printf("s2: %v\n", s2)
+
+
 }
