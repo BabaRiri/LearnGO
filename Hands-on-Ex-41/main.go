@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	// Cities/Towns in Zimbabwe
-	arr := [...]string{"Harare", "Bulawayo", "Mutare", "Gweru",
+	//Cities/Towns in Zimbabwe
+	slice1 := []string{"Harare", "Bulawayo", "Mutare", "Gweru",
 		"Chitungwiza", "Epworth", "Kwekwe", "Kadoma", "Masvingo",
 		"Chinhoyi", "Marondera", "Norton", "Chegutu", "Bindura",
 		"Zvishavane", "Victoria Falls", "Hwange", "Redcliff", "Rusape",
@@ -14,7 +14,10 @@ func main() {
 		"Filabusi", "Inyati", "Lalapanzi", "Macheke", "Maphisa", "Nyazura",
 		"Raffingora", "Sanyati", "Tsholotsho", "Umguza", "Mberengwa"}
 
-	fmt.Println(arr)
-	fmt.Printf("LENGTH: %v\n", len(arr))
-	fmt.Printf("%T", arr)
+	fmt.Println(slice1)
+	fmt.Printf("LENGTH: %v\n", len(slice1))
+
+	for i, city := range slice1 {
+		fmt.Printf("%v - %v\n", i, city)
+	}
 }
