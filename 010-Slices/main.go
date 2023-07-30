@@ -85,7 +85,7 @@ func main() {
 
 	fmt.Printf("-------------------------------\n")
 
-	//Slices point to an aunderlying arraay
+	//Slices point to an underlying array
 	s1 := []int{1, 2, 3, 4}
 	s2 := s1
 
@@ -96,6 +96,20 @@ func main() {
 	
 	fmt.Printf("s1: %v\n", s1)
 	fmt.Printf("s2: %v\n", s2)
+
+	fmt.Printf("-------------------------------\n")
+
+	//You need to make a new slice to store values of the array to copy
+	s3 := make([]int, 4)
+	copy(s3, s1)
+
+	fmt.Printf("s1: %v\n", s1)
+	fmt.Printf("s3: %v\n", s3)
+	
+	s1[1] = 100
+	
+	fmt.Printf("s1: %v\n", s1)
+	fmt.Printf("s3: %v\n", s3)
 
 
 }
