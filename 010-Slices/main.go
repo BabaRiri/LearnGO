@@ -62,18 +62,25 @@ func main() {
 	fmt.Printf("-------------------------------\n")
 
 	//Declaring a slice using make
-	slice2 := make([]int, 0, 5)
+	slice2 := make([]string, 0, 5)
 	fmt.Println(slice2)
 	fmt.Printf("%v\n", len(slice2))
 	fmt.Printf("%v\n", cap(slice2))
 
-	slice2 = append(slice2, 10, 20, 30, 40, 50)
+	slice2 = append(slice2, "10", "20", "30", "40", "50")
 	fmt.Println(slice2)
 	fmt.Printf("%v\n", len(slice2))
 	fmt.Printf("%v\n", cap(slice2))
 	
-	slice2 = append(slice2, 60, 70, 80)
+	slice2 = append(slice2, "60", "70", "80")
 	fmt.Println(slice2)
 	fmt.Printf("%v\n", len(slice2))
 	fmt.Printf("%v\n", cap(slice2))
+
+	fmt.Printf("-------------------------------\n")
+
+	//Creating a multi-dimensional slice
+	slice3 := [][]string{slice1, slice2}
+	fmt.Println(slice3)
+
 }
