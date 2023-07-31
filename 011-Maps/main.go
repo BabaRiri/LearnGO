@@ -39,16 +39,29 @@ func main() {
 	for k, v := range myMap {
 		fmt.Printf("KEY: %v\t\tVALUE: %v\n", k, v)
 	}
-
+	
 	fmt.Println("--------------------------------")
 	//Printing just the key
 	for k := range myMap {
 		fmt.Printf("KEY: %v\n", k)
 	}
-
+	
 	fmt.Println("--------------------------------")
 	//Printing just the value
 	for _, v := range myMap {
 		fmt.Printf("VALUE: %v\n", v)
+	}
+	
+	fmt.Println("--------------------------------")
+	//Deleting a value from a map
+	for k, v := range myMap {
+		fmt.Printf("KEY: %v\t\tVALUE: %v\n", k, v)
+	}
+	fmt.Printf("\n")
+	
+	delete(myMap, "Facebook")
+	
+	for k, v := range myMap {
+		fmt.Printf("KEY: %v\t\tVALUE: %v\n", k, v)
 	}
 }
