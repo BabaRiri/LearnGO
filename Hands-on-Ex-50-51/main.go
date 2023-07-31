@@ -35,4 +35,17 @@ func main() {
 		fmt.Printf("\n")
 	}
 	fmt.Println("--------------------------------")
+
+	//We delete an element from the map
+	delete(myMap, "R")
+
+    fmt.Println("--------------------------------")
+    for k, v := range myMap {
+        fmt.Printf("%v\n", k)
+        for i, v2 := range v {
+            fmt.Printf("%v - %v\n", i+1, v2)
+        }
+        fmt.Printf("\n")
+    }
+    fmt.Println("--------------------------------")
 }
