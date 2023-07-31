@@ -64,4 +64,18 @@ func main() {
 	for k, v := range myMap {
 		fmt.Printf("KEY: %v\t\tVALUE: %v\n", k, v)
 	}
+	
+    fmt.Println("--------------------------------")
+	//Using comma ok idiom
+	if k, ok := myMap["Amazon"]; ok {
+		fmt.Printf("VALUE: %v\n", k)
+	}else {
+		fmt.Println("Key not found!")
+	}
+
+	if k, ok := myMap["Telkom"]; !ok {
+		fmt.Println("Key not found!")
+	}else {
+		fmt.Printf("VALUE: %v\n", k)
+	}
 }
