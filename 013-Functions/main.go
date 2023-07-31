@@ -6,9 +6,9 @@ func main() {
 
 	f1() // Function with no arguments and no return values
 
-	f2(69) //Function with 1 argument and 0 return values
+	defer f2(69) //Function with 1 argument and 0 return values
 
-	fmt.Printf("I send: 2000 as an argument and got: %v returned back", f3(2000)) //Function with 1 argument and 1 return value
+	fmt.Printf("I send: 2000 as an argument and got: %v returned back\n", f3(2000)) //Function with 1 argument and 1 return value
 	
 	x, y := f4(7, 16) //Function with 2 arguments and 2 return values
 	fmt.Printf("I send: 7 and 16 as arguments and got: %v and %v returned back\n", x, y)
