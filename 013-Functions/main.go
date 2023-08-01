@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+type person struct {
+	name string
+}
+
 func main() {
 
 	f1() // Function with no arguments and no return values
@@ -15,7 +19,13 @@ func main() {
 
 	mySlice := []int {10, 20 , 30, 40, 50}
 	total := variadicFunc(mySlice...) //Function call for the variadic function + Unfurling a slice
-	fmt.Printf("The sum of the arguments is: %v", total)
+	fmt.Printf("The sum of the arguments is: %v\n", total)
+
+	p := person {
+		name: "Seward",
+	}
+	
+	p.show()
 }
 
 func f1() {
@@ -23,7 +33,7 @@ func f1() {
 }
 
 func f2(num int) {
-	fmt.Printf("I recieved: %d as an parameter\n", num)
+	fmt.Printf("\nDefered(f2): I recieved: %d as an parameter\n", num)
 }
 
 func f3(num int) int {
@@ -42,3 +52,8 @@ func variadicFunc(x ...int) (int) {
     }
     return sum
 }
+
+//Adding methods to types
+func (p person) show() {
+	fmt.Printf("\nThe name is %v\n", p.name)
+   }
