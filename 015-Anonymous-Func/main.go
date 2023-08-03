@@ -3,13 +3,19 @@ package main
 import "fmt"
 
 func main() {
+	
 	testFunc()
 
-	func(s string){
-		fmt.Println(s)
-	}("ANONYMOUS function here")
+	func(){
+		fmt.Println("Inside Anonymous function")
+	}()
 
-	func(){}()
+
+	x := func(s string){
+		fmt.Println(s)
+	}
+
+	x("Function as a type")
 }
 
 func testFunc() {
