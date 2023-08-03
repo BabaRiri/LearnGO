@@ -38,4 +38,6 @@ func main() {
 	if err := os.Truncate("014-Interfaces-02/note2.txt", 0); err != nil {
     	log.Printf("Failed to truncate: %v", err)
 	}
+	
+	p.writeOut(f)
 }
