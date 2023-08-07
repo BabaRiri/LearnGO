@@ -14,6 +14,16 @@ func mapDelta( m map[string]int, s string) {
 	m[s] = 4
 }
 
+//value semantics
+func addOne( i int) int {
+	return i + 1
+}
+
+//pointer semantics
+func addOnePtr(i *int) {
+	*i += 1
+}
+
 func main() {
 	x := 10
 	fmt.Println("VALUE:", x)
@@ -45,5 +55,17 @@ func main() {
 	fmt.Println("\n",mp)
 	mapDelta(mp, "Rethabile")
 	fmt.Println(mp)
+
+	// a will be passed by value so it wont chnage in the main function {VALUE SEMANTICS}
+	a := 1
+	fmt.Println("\n", a) //1
+	fmt.Println(addOne(a)) //2
+	fmt.Println(a) //1
+
+	// a pointer is passed to a function and the location where the value is stored changes {POINTER SEMANTICS}
+	b := 1
+	fmt.Println("\n", b) //1
+	addOnePtr(&b) //+1
+	fmt.Println(b) // 2
 
 }
