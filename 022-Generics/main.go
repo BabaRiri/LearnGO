@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"golang.org/x/exp/constraints"
+)
 
 func addI( a, b int) int {
 	return a + b
@@ -16,7 +20,7 @@ func addT[T int | float64](a, b T) T {
 }
 
 type myNum interface {
-	~int | ~float64
+	constraints.Integer | constraints.Float
 }
 
 func addT2[T myNum](a, b T) T {
