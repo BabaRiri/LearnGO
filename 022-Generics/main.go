@@ -10,7 +10,16 @@ func addF(a, b float64) float64 {
 	return a + b
 }
 
+// Type constraints
 func addT[T int | float64](a, b T) T {
+	return a + b
+}
+
+type myNum interface {
+	int | float64
+}
+
+func addT2[T myNum](a, b T) T {
 	return a + b
 }
 
@@ -27,7 +36,14 @@ func main() {
 
 	fmt.Printf("INT FUNC: %v\n", ansI)
 	fmt.Printf("FLOAT64 FUNC: %v\n\n", ansF)
+
 	fmt.Printf("GENERIC FUNC [int]: %v\n", ansT1)
-	fmt.Printf("GENERIC FUNC [float64]: %v\n", ansT2)
+	fmt.Printf("GENERIC FUNC [float64]: %v\n\n", ansT2)
+
+	ansT3 := addT2(a, b)
+	ansT4 := addT2(c, d)
+	fmt.Printf("(type set interface) GENERIC FUNC [int]: %v\n", ansT3)
+	fmt.Printf("(type set interface) GENERIC FUNC [float64]: %v\n", ansT4)
+
 	
 }
