@@ -16,12 +16,14 @@ func addT[T int | float64](a, b T) T {
 }
 
 type myNum interface {
-	int | float64
+	~int | ~float64
 }
 
 func addT2[T myNum](a, b T) T {
 	return a + b
 }
+
+type myAlias int
 
 func main() {
 	a := 2
@@ -45,5 +47,7 @@ func main() {
 	fmt.Printf("(type set interface) GENERIC FUNC [int]: %v\n", ansT3)
 	fmt.Printf("(type set interface) GENERIC FUNC [float64]: %v\n", ansT4)
 
-	
+	var x myAlias = 15
+	ansT5 := addT2(x, 2)
+	fmt.Printf("(Undelying types) GENERIC FUNC [int]: %v\n", ansT5)
 }
