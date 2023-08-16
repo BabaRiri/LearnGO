@@ -16,7 +16,7 @@ func gen() <-chan int {
 
 	go func (){
 		for i := 0; i < 100; i++ {
-		c <- i
+			c <- i
 		}
 		close(c)
 	}()
